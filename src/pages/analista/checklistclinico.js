@@ -1,5 +1,5 @@
 import React from "react"
-import { Flex, Box, Spacer, Text, Divider, Button, Avatar, Heading, FormControl, FormLabel, Input } from '@chakra-ui/react'
+import { Flex, Box, Spacer, Text, Divider, Button, Avatar, Heading, FormControl, Input } from '@chakra-ui/react'
 import { useNavigate } from "react-router-dom"
 
 const Checklistclinico = () => {

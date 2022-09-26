@@ -12,6 +12,10 @@ const Procedimentosclinicop6 = () => {
         navigate("/procedimentosclinicop5", { replace: true })
     }
 
+    const irResumoClinico = async () => {
+        navigate("/resumeclinico", { replace: true })
+    }
+
     return (
         <Flex w='100vw' h='100vh' direction='column'>
             <Box display='flex' alignItems='center' justifyContent='flex-start' w='100vw' h='10vh' bg='blue.900' paddingLeft='4vw'>
@@ -125,10 +129,10 @@ const Procedimentosclinicop6 = () => {
                             </Accordion>
                         </Box>
                         <Spacer />
-                        <Box display='flex' flexDirection='row' justifyContent='flex-end' alignItems='center' w='60vw' paddingBottom='2vh'>
+                        <Box display='flex' flexDirection='row' justifyContent='flex-end' alignItems='center' w='75vw' paddingBottom='2vh'>
                             <Button w='10vw' backgroundColor='green.900' variant='solid' color='white' _hover={{bg: '#38B2AC'}} boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' marginRight='2' onClick={irProcedimentosClinico} >Voltar</Button>
                             <Button w='10vw' backgroundColor='green.900' variant='solid' color='white' _hover={{bg: '#38B2AC'}} boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' marginRight='2' >Salvar</Button>
-                            <Button w='10vw' backgroundColor='green.900' variant='solid' color='white' _hover={{bg: '#38B2AC'}} boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' >Resumo</Button>
+                            <Button w='10vw' backgroundColor='green.900' variant='solid' color='white' _hover={{bg: '#38B2AC'}} boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' onClick={irResumoClinico} >Resumo</Button>
                         </Box>
                     </Box>
                 </Box>
