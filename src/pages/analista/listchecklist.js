@@ -1,5 +1,7 @@
 import React from "react"
 import { Flex, Box, Spacer, Text, Divider, Button, Avatar, Heading, Select } from '@chakra-ui/react'
+import Pagination from '../../components/pagination'
+import List from '../../components/list'
 import { useNavigate } from "react-router-dom"
 
 const Listchecklist = () => {
@@ -7,6 +9,8 @@ const Listchecklist = () => {
     document.title = "Contas Hospitalares | Lista de Checklist"
 
     let navigate = useNavigate()
+
+    let array = [{id: 1, prontuario:'3200', paciente:'caio'},{id: 2, prontuario:'3244', paciente:'jose'},{id: 3, prontuario:'5244', paciente:'carlos'},{id: 4, prontuario:'4014', paciente:'maria'}]
  
     return (
         <Flex w='100vw' h='100vh' direction='column'>
@@ -52,9 +56,14 @@ const Listchecklist = () => {
                             <Select w='10vw'>
                                 <option value='option1'>Clinico</option>
                                 <option value='option2'>Cirurgico</option>
-                                <option value='option3'>Option 3</option>
                             </Select>
                         </Box>
+                        <Box display='flex' flexDirection='row' justifyContent='center' w='60vw' marginBottom='3' marginTop='3'>
+                            <List objetarray={array}/>
+                        </Box>
+                        <Box display='flex' flexDirection='row' justifyContent='center'>
+                            <Pagination />
+                        </Box>      
                     </Box>
                 </Box>
             </Box>

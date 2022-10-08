@@ -1,6 +1,7 @@
 import React from "react"
 import { Flex, Box, Spacer, Text, Divider, Button, Avatar, Heading, InputGroup, Input, InputRightElement, Image } from '@chakra-ui/react'
 import { useNavigate } from "react-router-dom"
+import UploadButton from "../../components/uploadButton"
 
 const Dados = () => {
 
@@ -65,7 +66,7 @@ const Dados = () => {
                                     <Text color='blue.900' fontSize='md' paddingRight='3'>caioguilhermeuna@gmail.com</Text>
                                 </Box>
                             </Box>
-                            <Box display='flex' flexDirection='row'>
+                            <Box display='flex' flexDirection='row' margin='5'>
                                 <Box>
                                     <Image
                                         borderRadius='full'
@@ -74,8 +75,11 @@ const Dados = () => {
                                         alt='Caio Guilherme'
                                     />
                                 </Box>
-                                <Box display='flex' flexDirection='column'>
-                                    <Input type='file' />
+                                <Box display='flex' flexDirection='column' justifyContent='space-around' margin='5'>
+                                    <UploadButton />
+                                    <Button w='10vw' backgroundColor='green.800' variant='solid' color='white' _hover={{bg: '#38B2AC'}}>
+                                        Salvar
+                                    </Button>
                                 </Box>
                             </Box>
                         </Box>

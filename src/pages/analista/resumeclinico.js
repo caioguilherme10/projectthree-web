@@ -1,6 +1,8 @@
 import React from "react"
 import { Flex, Box, Spacer, Text, Divider, Button, Avatar, Heading, FormControl, Input } from '@chakra-ui/react'
 import { useNavigate } from "react-router-dom"
+import Pagination from '../../components/pagination'
+import Table from '../../components/table'
 
 const Resumeclinico = () => {
 
@@ -50,14 +52,14 @@ const Resumeclinico = () => {
                         <Button w='15vw' backgroundColor='red.900' variant='solid' color='white' _hover={{bg: '#E53E3E'}} boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'>Sair</Button>
                     </Box>
                 </Box>
-                <Box display='flex' justifyContent='center' alignItems='center' w='90vw' bg='gray.400'>
-                    <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' w='80vw' h='88vh' bg='white' borderRadius='md' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' > 
+                <Box display='flex' justifyContent='center' alignItems='center' w='90vw' h='200vh' bg='gray.400'>
+                    <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' w='80vw' h='195vh' bg='white' borderRadius='md' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' > 
                         <Box display='flex' flexDirection='row' justifyContent='space-between' alignItems='end' w='75vw' h='6vh' paddingBottom='0.5vh'>
                             <Text color='blue.900'>Informações</Text>
                             <Text color='blue.900'>CLINICO</Text>
                         </Box>
                         <Divider w='75vw' border='2px' borderColor='blue.900' borderRadius='md' />
-                        <Box display='flex' flexDirection='column'>
+                        <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center'>
                             <Box display='flex' flexDirection='row' w='75vw' paddingBottom='2' paddingTop='2' >
                                 <Text color='blue.900' fontSize='md' as='b' paddingRight='1'>Nome do Paciente:</Text>
                                 <Text color='blue.900' fontSize='md' paddingRight='3'>Caio Guilherme de Lira dos Santos</Text>
@@ -66,7 +68,7 @@ const Resumeclinico = () => {
                                 <Text color='blue.900' fontSize='md' as='b' paddingRight='1'>Tipo de Prontuario:</Text>
                                 <Text color='blue.900' fontSize='md' >Clinico</Text>
                             </Box>
-                            <Box display='flex' flexDirection='row' w='60vw' paddingBottom='2'>
+                            <Box display='flex' flexDirection='row' w='75vw' paddingBottom='2'>
                                 <Text color='blue.900' fontSize='md' as='b' paddingRight='1'>Data Nascimento:</Text>
                                 <Text color='blue.900' fontSize='md' paddingRight='3'>06/04/1994</Text>
                                 <Text color='blue.900' fontSize='md' as='b' paddingRight='1'>Data Admissao:</Text>
@@ -76,11 +78,14 @@ const Resumeclinico = () => {
                                 <Text color='blue.900' fontSize='md' as='b' paddingRight='1'>Tipo de Alta:</Text>
                                 <Text color='blue.900' fontSize='md' >01</Text>
                             </Box>
-                            <Box display='flex' flexDirection='row' w='60vw' paddingBottom='2'>
+                            <Box display='flex' flexDirection='row' w='75vw' paddingBottom='2'>
                                 <Text color='blue.900' fontSize='md' as='b' paddingRight='1'>Procedimento Regulado:</Text>
                                 <Text color='blue.900' fontSize='md' paddingRight='3'>Nome do Procedimento</Text>
                                 <Text color='blue.900' fontSize='md' as='b' paddingRight='1'>Mudança de Procedimento:</Text>
                                 <Text color='blue.900' fontSize='md' >Nome de Procedimento</Text>
+                            </Box>
+                            <Box display='flex' flexDirection='column' w='75vw' justifyContent='center' alignItems='center'>
+                                <Table />
                             </Box>
                         </Box>
                         <Spacer />
