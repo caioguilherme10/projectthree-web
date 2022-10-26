@@ -12,6 +12,10 @@ const Checklistclinico = () => {
         navigate("/procedimentosclinicop1", { replace: true })
     }
 
+    const irDados = async () => {
+        navigate("/dadosanalista", { replace: true })
+    }
+
     return (
         <Flex w='100vw' h='100vh' direction='column'>
             <Box display='flex' alignItems='center' justifyContent='flex-start' w='100vw' h='10vh' bg='blue.900' paddingLeft='4vw'>
@@ -39,7 +43,7 @@ const Checklistclinico = () => {
                         <Button w='15vw' backgroundColor='white' variant='solid' color='blue.900' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'>Correções</Button>
                     </Box>
                     <Box>
-                        <Button w='15vw' backgroundColor='white' variant='solid' color='blue.900' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'>Dados</Button>
+                        <Button w='15vw' backgroundColor='white' variant='solid' color='blue.900' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' onClick={irDados}>Dados</Button>
                     </Box>
                     <Spacer />
                     <Box paddingBottom='10'>

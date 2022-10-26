@@ -18,6 +18,10 @@ const Resumeclinico = () => {
         navigate("/", { replace: true })
     }
 
+    const irDados = async () => {
+        navigate("/dadosanalista", { replace: true })
+    }
+
     return (
         <Flex w='100vw' h='100vh' direction='column'>
             <Box display='flex' alignItems='center' justifyContent='flex-start' w='100vw' h='10vh' bg='blue.900' paddingLeft='4vw'>
@@ -45,15 +49,15 @@ const Resumeclinico = () => {
                         <Button w='15vw' backgroundColor='white' variant='solid' color='blue.900' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'>Correções</Button>
                     </Box>
                     <Box>
-                        <Button w='15vw' backgroundColor='white' variant='solid' color='blue.900' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'>Dados</Button>
+                        <Button w='15vw' backgroundColor='white' variant='solid' color='blue.900' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' onClick={irDados}>Dados</Button>
                     </Box>
                     <Spacer />
                     <Box paddingBottom='10'>
                         <Button w='15vw' backgroundColor='red.900' variant='solid' color='white' _hover={{bg: '#E53E3E'}} boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'>Sair</Button>
                     </Box>
                 </Box>
-                <Box display='flex' justifyContent='center' alignItems='center' w='90vw' h='200vh' bg='gray.400'>
-                    <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' w='80vw' h='195vh' bg='white' borderRadius='md' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' > 
+                <Box display='flex' justifyContent='center' alignItems='center' w='90vw' h='90vh' bg='gray.400'>
+                    <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' w='80vw' h='88vh' bg='white' borderRadius='md' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' overflow='auto'> 
                         <Box display='flex' flexDirection='row' justifyContent='space-between' alignItems='end' w='75vw' h='6vh' paddingBottom='0.5vh'>
                             <Text color='blue.900'>Informações</Text>
                             <Text color='blue.900'>CLINICO</Text>
@@ -84,7 +88,7 @@ const Resumeclinico = () => {
                                 <Text color='blue.900' fontSize='md' as='b' paddingRight='1'>Mudança de Procedimento:</Text>
                                 <Text color='blue.900' fontSize='md' >Nome de Procedimento</Text>
                             </Box>
-                            <Box display='flex' flexDirection='column' w='75vw' justifyContent='center' alignItems='center'>
+                            <Box display='flex' flexDirection='column' w='75vw' h='45vh' justifyContent='center' alignItems='center' overflow='auto'>
                                 <Table />
                             </Box>
                         </Box>
