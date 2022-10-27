@@ -12,7 +12,7 @@ const Login = () => {
     const handleClick = () => setShow(!show)
 
     const handleLogin = () => {
-        navigate("/", { replace: true })
+        navigate("/checklist", { replace: true })
     }
 
     return (

@@ -14,6 +14,26 @@ const Dados = () => {
     const handleClick2 = () => setShow2(!show2)
 
     let navigate = useNavigate()
+
+    const irNovoChecklist = async () => {
+        navigate("/checklist", { replace: true })
+    }
+
+    const irAbertos = async () => {
+        navigate("/listchecklist", { replace: true })
+    }
+
+    const irCorrecoes = async () => {
+        navigate("/listchecklist", { replace: true })
+    }
+
+    const irDados = async () => {
+        navigate("/dadosanalista", { replace: true })
+    }
+
+    const irSair = async () => {
+        navigate("/", { replace: true })
+    }
  
     return (
         <Flex w='100vw' h='100vh' direction='column'>
@@ -33,20 +53,20 @@ const Dados = () => {
                     </Box>
                     <Divider w='15vw' />
                     <Box paddingBottom='2' paddingTop='10'>
-                        <Button w='15vw' backgroundColor='white' variant='solid' color='blue.900' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'>Novo Checklist</Button>
+                        <Button w='15vw' backgroundColor='white' variant='solid' color='blue.900' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' onClick={irNovoChecklist}>Novo Checklist</Button>
                     </Box>
                     <Box paddingBottom='2'>
-                        <Button w='15vw' backgroundColor='white' variant='solid' color='blue.900' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'>Abertos</Button>
+                        <Button w='15vw' backgroundColor='white' variant='solid' color='blue.900' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' onClick={irAbertos}>Abertos</Button>
                     </Box>
                     <Box paddingBottom='2'>
-                        <Button w='15vw' backgroundColor='white' variant='solid' color='blue.900' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'>Correções</Button>
+                        <Button w='15vw' backgroundColor='white' variant='solid' color='blue.900' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' onClick={irCorrecoes}>Correções</Button>
                     </Box>
                     <Box>
-                        <Button w='15vw' backgroundColor='white' variant='solid' color='blue.900' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'>Dados</Button>
+                        <Button w='15vw' backgroundColor='white' variant='solid' color='blue.900' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' onClick={irDados}>Dados</Button>
                     </Box>
                     <Spacer />
                     <Box paddingBottom='10'>
-                        <Button w='15vw' backgroundColor='red.900' variant='solid' color='white' _hover={{bg: '#E53E3E'}} boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'>Sair</Button>
+                        <Button w='15vw' backgroundColor='red.900' variant='solid' color='white' _hover={{bg: '#E53E3E'}} boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' onClick={irSair}>Sair</Button>
                     </Box>
                 </Box>
                 <Box display='flex' justifyContent='center' alignItems='center' w='80vw' bg='gray.400'>

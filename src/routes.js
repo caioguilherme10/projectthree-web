@@ -18,8 +18,8 @@ import Listchecklist from './pages/analista/listchecklist';
 const Routess = () => {
     return (
         <Routes>
-            <Route path='/login' element={<Login />}/>
-            <Route path="/" element={<NewChecklist />}/>
+            <Route path='/' element={<Login />}/>
+            <Route path="/checklist" element={<NewChecklist />}/>
             <Route path="/checkclinico" element={<ChecklistClinico />}/>
             <Route path="/procedimentosclinicop1" element={<ProcedimentosClinicoP1 />}/>
             <Route path="/procedimentosclinicop2" element={<ProcedimentosClinicoP2 />}/>
