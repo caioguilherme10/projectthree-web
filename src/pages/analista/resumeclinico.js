@@ -1,7 +1,6 @@
 import React from "react"
-import { Flex, Box, Spacer, Text, Divider, Button, Avatar, Heading, FormControl, Input } from '@chakra-ui/react'
+import { Flex, Box, Spacer, Text, Divider, Button, Avatar, Heading } from '@chakra-ui/react'
 import { useNavigate } from "react-router-dom"
-import Pagination from '../../components/pagination'
 import Table from '../../components/table'
 
 const Resumeclinico = () => {
@@ -27,7 +26,7 @@ const Resumeclinico = () => {
     }
 
     const irCorrecoes = async () => {
-        navigate("/listchecklist", { replace: true })
+        navigate("/listcorrecoes", { replace: true })
     }
 
     const irDados = async () => {

@@ -25,7 +25,7 @@ const Procedimentosclinicop6 = () => {
     }
 
     const irCorrecoes = async () => {
-        navigate("/listchecklist", { replace: true })
+        navigate("/listcorrecoes", { replace: true })
     }
 
     const irDados = async () => {

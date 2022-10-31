@@ -14,6 +14,7 @@ import Procedimentosclinicop6 from './pages/analista/procedimentosclinicop6';
 import Resumeclinico from './pages/analista/resumeclinico';
 import DadosAnalista from './pages/analista/dados';
 import Listchecklist from './pages/analista/listchecklist';
+import Listcorrecoes from './pages/analista/listcorrecoes';
 
 const Routess = () => {
     return (
@@ -30,6 +31,7 @@ const Routess = () => {
             <Route path="/resumeclinico" element={<Resumeclinico />}/>
             <Route path="/dadosanalista" element={<DadosAnalista />}/>
             <Route path="/listchecklist" element={<Listchecklist />}/>
+            <Route path="/listcorrecoes" element={<Listcorrecoes />}/>
         </Routes>
     );
 };

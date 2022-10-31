@@ -1,20 +1,14 @@
 import React from "react"
-import { Flex, Box, Spacer, Text, Divider, Button, Avatar, Heading } from '@chakra-ui/react'
+import { Flex, Box, Spacer, Text, Divider, Button, Avatar, Heading, Select } from '@chakra-ui/react'
+import Pagination from '../../components/pagination'
+import List from '../../components/listcorrecoes'
 import { useNavigate } from "react-router-dom"
 
-const Newchecklist = () => {
+const Listcorrecoes = () => {
 
-    document.title = "Contas Hospitalares | Criação de Checklist"
+    document.title = "Contas Hospitalares | Lista de Correções"
 
     let navigate = useNavigate()
-
-    const irClinico = async () => {
-        navigate("/checkclinico", { replace: true })
-    }
-
-    const irCirugico = async () => {
-
-    }
 
     const irNovoChecklist = async () => {
         navigate("/checklist", { replace: true })
@@ -35,6 +29,19 @@ const Newchecklist = () => {
     const irSair = async () => {
         navigate("/", { replace: true })
     }
+
+    let array = [
+        {id: 1, prontuario:'3200', paciente:'caio', data:'22/06/2022'},
+        {id: 2, prontuario:'3244', paciente:'jose', data:'22/06/2022'},
+        {id: 3, prontuario:'5244', paciente:'carlos', data:'22/06/2022'},
+        {id: 4, prontuario:'4014', paciente:'maria', data:'22/06/2022'},
+        {id: 5, prontuario:'3244', paciente:'jose', data:'22/06/2022'},
+        {id: 6, prontuario:'5244', paciente:'carlos', data:'22/06/2022'},
+        //{id: 7, prontuario:'4014', paciente:'maria', data:'22/06/2022'},
+        //{id: 8, prontuario:'3244', paciente:'jose', data:'22/06/2022'},
+        //{id: 9, prontuario:'5244', paciente:'carlos', data:'22/06/2022'},
+        //{id: 10, prontuario:'4014', paciente:'maria', data:'22/06/2022'},
+    ]
  
     return (
         <Flex w='100vw' h='100vh' direction='column'>
@@ -71,24 +78,23 @@ const Newchecklist = () => {
                     </Box>
                 </Box>
                 <Box display='flex' justifyContent='center' alignItems='center' w='80vw' bg='gray.400'>
-                    <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' w='70vw' h='80vh' bg='white' borderRadius='md' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' > 
-                        <Box paddingBottom='4'>
-                            <Heading>
-                                Criar Novo Checklist
-                            </Heading>
+                    <Box display='flex' flexDirection='column' alignItems='center' w='70vw' h='80vh' bg='white' borderRadius='md' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' > 
+                        <Box display='flex' flexDirection='row' w='60vw' h='5vh' marginTop='2vh'>
+                            <Text color='blue.900'>Lista de Checklist</Text>
                         </Box>
-                        <Box display='flex' flexDirection='row'>
-                            <Box>
-                                <Button w='15vw' backgroundColor='green.700' variant='solid' color='white' _hover={{bg: '#48BB78'}} boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' 
-                                    onClick={irClinico}
-                                >
-                                    Clinico
-                                </Button>
-                            </Box>
-                            <Box paddingLeft='2'>
-                                <Button w='15vw' backgroundColor='green.700' variant='solid' color='white' _hover={{bg: '#48BB78'}} boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' onClick={irCirugico}>Cirurgico</Button>
-                            </Box>
+                        <Divider w='60vw' border='2px' borderColor='blue.900' borderRadius='md' />
+                        <Box display='flex' flexDirection='row' justifyContent='flex-end' w='60vw' marginTop='3'>
+                            <Select w='10vw'>
+                                <option value='option1'>Clinico</option>
+                                <option value='option2'>Cirurgico</option>
+                            </Select>
                         </Box>
+                        <Box display='flex' flexDirection='row' justifyContent='center' w='60vw' marginBottom='3' marginTop='3'>
+                            <List objetarray={array}/>
+                        </Box>
+                        <Box display='flex' flexDirection='row' justifyContent='center'>
+                            <Pagination />
+                        </Box>      
                     </Box>
                 </Box>
             </Box>
@@ -96,4 +102,4 @@ const Newchecklist = () => {
     )
 }
 
-export default Newchecklist
+export default Listcorrecoes

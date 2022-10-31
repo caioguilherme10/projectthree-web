@@ -19,7 +19,7 @@ const Listchecklist = () => {
     }
 
     const irCorrecoes = async () => {
-        navigate("/listchecklist", { replace: true })
+        navigate("/listcorrecoes", { replace: true })
     }
 
     const irDados = async () => {
@@ -30,7 +30,18 @@ const Listchecklist = () => {
         navigate("/", { replace: true })
     }
 
-    let array = [{id: 1, prontuario:'3200', paciente:'caio'},{id: 2, prontuario:'3244', paciente:'jose'},{id: 3, prontuario:'5244', paciente:'carlos'},{id: 4, prontuario:'4014', paciente:'maria'}]
+    let array = [
+        {id: 1, prontuario:'3200', paciente:'caio', data:'22/06/2022'},
+        {id: 2, prontuario:'3244', paciente:'jose', data:'22/06/2022'},
+        {id: 3, prontuario:'5244', paciente:'carlos', data:'22/06/2022'},
+        {id: 4, prontuario:'4014', paciente:'maria', data:'22/06/2022'},
+        {id: 5, prontuario:'3244', paciente:'jose', data:'22/06/2022'},
+        {id: 6, prontuario:'5244', paciente:'carlos', data:'22/06/2022'},
+        {id: 7, prontuario:'4014', paciente:'maria', data:'22/06/2022'},
+        //{id: 8, prontuario:'3244', paciente:'jose', data:'22/06/2022'},
+        //{id: 9, prontuario:'5244', paciente:'carlos', data:'22/06/2022'},
+        //{id: 10, prontuario:'4014', paciente:'maria', data:'22/06/2022'},
+    ]
  
     return (
         <Flex w='100vw' h='100vh' direction='column'>

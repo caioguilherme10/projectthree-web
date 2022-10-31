@@ -1,7 +1,6 @@
 import * as React from 'react';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Button from '@mui/material/Button';
 
@@ -15,7 +14,7 @@ export default function MyList(props) {
     id: 1,
     prontuario: '',
     paciente: '',
-    data:''
+    data: ''
   }
 
   return (
@@ -24,18 +23,19 @@ export default function MyList(props) {
       {props.objetarray.map((value) => {
         objvalue = value
         const labelId = `checkbox-list-label-${objvalue.id}`;
+
         return (
           <ListItem
             key={objvalue.id}
-            sx={{boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', margin: '5px', bgcolor: '#EDF2F7'}}
+            sx={{boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', margin: '5px', bgcolor: '#EDF2F7', width: '100%'}}
             secondaryAction={
-              <Button variant="contained" color="success">Continuar</Button>
+              <div>
+                <Button variant="contained" color="error">Ver Erros</Button>
+                <Button sx={{ marginLeft:'5px' }} variant="contained" color="success">Continuar</Button>
+              </div>
             }
-            disablePadding
           >
-            <ListItemButton role={undefined} dense>
-              <ListItemText id={labelId} primary={`Prontuario: ${objvalue.prontuario} - Paciente: ${objvalue.paciente} - Data: ${objvalue.data}` } />
-            </ListItemButton>
+            <ListItemText id={labelId} primary={`Prontuario: ${objvalue.prontuario} - Paciente: ${objvalue.paciente} - Data: ${objvalue.data}` } />
           </ListItem>
         );
       })}
