@@ -15,6 +15,9 @@ import Resumeclinico from './pages/analista/resumeclinico';
 import DadosAnalista from './pages/analista/dados';
 import Listchecklist from './pages/analista/listchecklist';
 import Listcorrecoes from './pages/analista/listcorrecoes';
+import DadosAuditor from './pages/auditor/dados';
+import ListChecklistAuditor from './pages/auditor/checklist';
+import ResumoAuditor from './pages/auditor/resumo';
 
 const Routess = () => {
     return (
@@ -32,6 +35,9 @@ const Routess = () => {
             <Route path="/dadosanalista" element={<DadosAnalista />}/>
             <Route path="/listchecklist" element={<Listchecklist />}/>
             <Route path="/listcorrecoes" element={<Listcorrecoes />}/>
+            <Route path="/dadosauditor" element={<DadosAuditor />}/>
+            <Route path="/listchecklistauditor" element={<ListChecklistAuditor />}/>
+            <Route path="/resumoauditor" element={<ResumoAuditor />}/>
         </Routes>
     );
 };

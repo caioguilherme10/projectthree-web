@@ -9,11 +9,23 @@ const Login = () => {
     let navigate = useNavigate();
 
     const [show, setShow] = React.useState(false)
+    const [email,setEmail] =  React.useState('')
     const handleClick = () => setShow(!show)
 
     const handleLogin = () => {
-        navigate("/checklist", { replace: true })
+        if(email === 'analista'){
+            navigate("/checklist", { replace: true })
+        }else if(email === 'admin'){
+
+        }else if(email === 'auditor'){
+            navigate("/dadosauditor", { replace: true })
+        }else if(email === 'digitador'){
+
+        }
+        
     }
+
+    const handleChangeEmail = (event) => setEmail(event.target.value)
 
     return (
         <Flex w='100vw' h='100vh' direction='column'>
@@ -27,7 +39,12 @@ const Login = () => {
                     </Box>
                     <Box w='40vw' h='25vh' display='flex' flexDirection='column' justifyContent='center' alignItems='center'>
                         <Box paddingBottom='10'>
-                            <Input placeholder='E-mail' pr='4.5rem'/>
+                            <Input 
+                                placeholder='E-mail' 
+                                pr='4.5rem'
+                                value={email}
+                                onChange={handleChangeEmail}
+                            />
                         </Box>
                         <Box>
                             <InputGroup size='md'>
