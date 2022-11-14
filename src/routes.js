@@ -18,6 +18,9 @@ import Listcorrecoes from './pages/analista/listcorrecoes';
 import DadosAuditor from './pages/auditor/dados';
 import ListChecklistAuditor from './pages/auditor/checklist';
 import ResumoAuditor from './pages/auditor/resumo';
+import DadosDigitador from './pages/digitador/dados';
+import ListChecklistDigitador from './pages/digitador/checklist';
+import ResumoDigitador from './pages/digitador/resumo';
 
 const Routess = () => {
     return (
@@ -38,6 +41,9 @@ const Routess = () => {
             <Route path="/dadosauditor" element={<DadosAuditor />}/>
             <Route path="/listchecklistauditor" element={<ListChecklistAuditor />}/>
             <Route path="/resumoauditor" element={<ResumoAuditor />}/>
+            <Route path="/dadosdigitador" element={<DadosDigitador />}/>
+            <Route path="/listchecklistdigitador" element={<ListChecklistDigitador />}/>
+            <Route path="/resumodigitador" element={<ResumoDigitador />}/>
         </Routes>
     );
 };

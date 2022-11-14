@@ -20,7 +20,7 @@ const Login = () => {
         }else if(email === 'auditor'){
             navigate("/dadosauditor", { replace: true })
         }else if(email === 'digitador'){
-
+            navigate("/dadosdigitador", { replace: true })
         }
         
     }
