@@ -21,6 +21,8 @@ import ResumoAuditor from './pages/auditor/resumo';
 import DadosDigitador from './pages/digitador/dados';
 import ListChecklistDigitador from './pages/digitador/checklist';
 import ResumoDigitador from './pages/digitador/resumo';
+import DadosAdmin from './pages/admin/dados';
+import CadastroAdmin from './pages/admin/cadastro';
 
 const Routess = () => {
     return (
@@ -44,6 +46,8 @@ const Routess = () => {
             <Route path="/dadosdigitador" element={<DadosDigitador />}/>
             <Route path="/listchecklistdigitador" element={<ListChecklistDigitador />}/>
             <Route path="/resumodigitador" element={<ResumoDigitador />}/>
+            <Route path="/dadosadmin" element={<DadosAdmin />}/>
+            <Route path="/cadastroadmin" element={<CadastroAdmin />}/>
         </Routes>
     );
 };

@@ -2,6 +2,7 @@ import React from "react"
 import { Flex, Box, Spacer, Text, Divider, Button, Avatar, Heading, Select } from '@chakra-ui/react'
 import Pagination from '../../components/pagination'
 import List from '../../components/listcorrecoes'
+import Busca from '../../components/busca'
 import { useNavigate } from "react-router-dom"
 
 const Listcorrecoes = () => {
@@ -80,10 +81,11 @@ const Listcorrecoes = () => {
                 <Box display='flex' justifyContent='center' alignItems='center' w='80vw' bg='gray.400'>
                     <Box display='flex' flexDirection='column' alignItems='center' w='70vw' h='80vh' bg='white' borderRadius='md' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' > 
                         <Box display='flex' flexDirection='row' w='60vw' h='5vh' marginTop='2vh'>
-                            <Text color='blue.900'>Lista de Checklist</Text>
+                            <Text color='blue.900' as='b'>Lista de Checklist</Text>
                         </Box>
                         <Divider w='60vw' border='2px' borderColor='blue.900' borderRadius='md' />
-                        <Box display='flex' flexDirection='row' justifyContent='flex-end' w='60vw' marginTop='3'>
+                        <Box display='flex' flexDirection='row' justifyContent='space-between' w='60vw' marginTop='3'>
+                            <Busca />
                             <Select w='10vw'>
                                 <option value='option1'>Clinico</option>
                                 <option value='option2'>Cirurgico</option>

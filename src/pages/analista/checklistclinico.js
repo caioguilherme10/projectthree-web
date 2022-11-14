@@ -73,8 +73,8 @@ const Checklistclinico = () => {
                 <Box display='flex' justifyContent='center' alignItems='center' w='80vw' bg='gray.400'>
                     <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' w='70vw' h='80vh' bg='white' borderRadius='md' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' > 
                         <Box display='flex' flexDirection='row' justifyContent='space-between' alignItems='end' w='60vw' h='6vh' paddingBottom='0.5vh'>
-                            <Text color='blue.900'>Informações</Text>
-                            <Text color='blue.900'>CLINICO</Text>
+                            <Text color='blue.900' as='b'>Informações</Text>
+                            <Text color='blue.900' as='b'>CLINICO</Text>
                         </Box>
                         <Divider w='60vw' border='2px' borderColor='blue.900' borderRadius='md' />
                         <Box display='flex' flexDirection='column'>

@@ -16,7 +16,7 @@ const Login = () => {
         if(email === 'analista'){
             navigate("/checklist", { replace: true })
         }else if(email === 'admin'){
-
+            navigate("/dadosadmin", { replace: true })
         }else if(email === 'auditor'){
             navigate("/dadosauditor", { replace: true })
         }else if(email === 'digitador'){
