@@ -80,28 +80,28 @@ const Checklistclinico = () => {
                         <Box display='flex' flexDirection='column'>
                             <FormControl>
                                 <Box display='flex' flexDirection='row' w='60vw' paddingBottom='2' paddingTop='2' >
-                                    <Input placeholder='Prontuario' marginRight='2' />
+                                    <Input borderColor='Black' placeholder='Prontuario' marginRight='2' />
                                     <Button w='10vw' backgroundColor='blue.900' variant='solid' color='white' _hover={{bg: '#4299E1'}} boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'>Buscar</Button>
                                 </Box>
                                 <Box display='flex' flexDirection='row' w='60vw' paddingBottom='2'>
-                                    <Input placeholder='Paciente' marginRight='2' />
-                                    <Input placeholder='Tipo Alta' />
+                                    <Input borderColor='Black' placeholder='Paciente' marginRight='2' />
+                                    <Input borderColor='Black' placeholder='Tipo Alta' />
                                 </Box>
                                 <Box display='flex' flexDirection='row' w='60vw' paddingBottom='2'>
-                                    <Input placeholder='Data Nascimento' marginRight='2' />
-                                    <Input placeholder='Admição' marginRight='2' />
-                                    <Input placeholder='Alta' />
+                                    <Input borderColor='Black' placeholder='Data Nascimento' marginRight='2' />
+                                    <Input borderColor='Black' placeholder='Admição' marginRight='2' />
+                                    <Input borderColor='Black' placeholder='Alta' />
                                 </Box>
                                 <Box display='flex' flexDirection='row' w='60vw' paddingBottom='2'>
-                                    <Input placeholder='Procedimento Regulado' marginRight='2' />
-                                    <Input placeholder='CID 1' />
+                                    <Input borderColor='Black' placeholder='Procedimento Regulado' marginRight='2' />
+                                    <Input borderColor='Black' placeholder='CID 1' />
                                 </Box>
                                 <Box display='flex' flexDirection='row' w='60vw' paddingBottom='2'>
                                     <Button w='10vw' backgroundColor='green.900' variant='solid' color='white' _hover={{bg: '#38B2AC'}} boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'>Mudança</Button>
                                 </Box>
                                 <Box display='flex' flexDirection='row' w='60vw' paddingBottom='2'>
-                                    <Input placeholder='Mudança de Procedimento' marginRight='2' />
-                                    <Input placeholder='CID 2' />
+                                    <Input borderColor='Black' placeholder='Mudança de Procedimento' marginRight='2' />
+                                    <Input borderColor='Black' placeholder='CID 2' />
                                 </Box>
                             </FormControl>
                         </Box>

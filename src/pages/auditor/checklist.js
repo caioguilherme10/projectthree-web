@@ -79,7 +79,7 @@ const Listchecklist = () => {
                         <Divider w='60vw' border='2px' borderColor='blue.900' borderRadius='md' />
                         <Box display='flex' flexDirection='row' justifyContent='space-between' w='60vw' marginTop='3'>
                             <Busca />
-                            <Select w='10vw'>
+                            <Select borderColor='Black' w='10vw'>
                                 <option value='option1'>Clinico</option>
                                 <option value='option2'>Cirurgico</option>
                             </Select>

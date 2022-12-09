@@ -1,6 +1,7 @@
 import React from "react"
 import { Flex, Box, Spacer, Text, Divider, Button, Avatar, Heading, Input, Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel } from '@chakra-ui/react'
 import { useNavigate } from "react-router-dom"
+import "./analista.css"
 
 const Procedimentosclinico = () => {
 
@@ -39,7 +40,6 @@ const Procedimentosclinico = () => {
     const salvar = async () => {
         navigate("/checklist", { replace: true })
     }
-
 
     return (
         <Flex w='100vw' h='100vh' direction='column'>
@@ -96,46 +96,46 @@ const Procedimentosclinico = () => {
                                     <AccordionPanel h='27vh' w='75vw' padding='0.5'>
                                         <table style={{border: '1px solid black'}}>
                                             <tr style={{border: '1px solid black'}}>
-                                                <th style={{width: '25%', fontSize:'12px', border: '1px solid black'}} >PROCEDIMENTOS</th>
-                                                <th style={{width: '20%', fontSize:'12px', border: '1px solid black'}}>CODIGO</th>
-                                                <th style={{width: '20%', fontSize:'12px', border: '1px solid black'}}>COMP 1</th>
-                                                <th style={{width: '20%', fontSize:'12px', border: '1px solid black'}}>COMP 2</th>
-                                                <th style={{fontSize:'12px', border: '1px solid black'}}>COMP 3</th>
+                                                <th className="myth4" >PROCEDIMENTOS</th>
+                                                <th className="myth2" >CODIGO</th>
+                                                <th className="myth2" >COMP 1</th>
+                                                <th className="myth2" >COMP 2</th>
+                                                <th className="myth3" >COMP 3</th>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>CONSULTAS MEDICAS</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>03.01.01.017-0</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >CONSULTAS MEDICAS</td>
+                                                <td className="myth1" >03.01.01.017-0</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>DIA ACOM MENOR</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>08.02.01.002-4</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >DIA ACOM MENOR</td>
+                                                <td className="myth1" >08.02.01.002-4</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>PERM.MAIOR</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>08.02.01.019-9</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >PERM.MAIOR</td>
+                                                <td className="myth1" >08.02.01.019-9</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>DIA ACOM IDOSO</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>08.02.01.004-0</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >DIA ACOM IDOSO</td>
+                                                <td className="myth1" >08.02.01.004-0</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>DIA ACOMP MAIO</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>08.02.01.001-6</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >DIA ACOMP MAIO</td>
+                                                <td className="myth1" >08.02.01.001-6</td>
+                                                <td className="myth1" ><Input size='xs' /></td>
+                                                <td className="myth1" ><Input size='xs' /></td>
+                                                <td className="myth1" ><Input size='xs' /></td>
                                             </tr>
                                         </table>
                                     </AccordionPanel>
@@ -152,81 +152,81 @@ const Procedimentosclinico = () => {
                                     <AccordionPanel h='50vh' w='75vw' padding='0.5'>
                                         <table style={{border: '1px solid black'}}>
                                             <tr style={{border: '1px solid black'}}>
-                                                <th style={{width: '25%', fontSize:'12px', border: '1px solid black'}} >PROCEDIMENTOS</th>
-                                                <th style={{width: '20%', fontSize:'12px', border: '1px solid black'}}>CODIGO</th>
-                                                <th style={{width: '20%', fontSize:'12px', border: '1px solid black'}}>COMP 1</th>
-                                                <th style={{width: '20%', fontSize:'12px', border: '1px solid black'}}>COMP 2</th>
-                                                <th style={{fontSize:'12px', border: '1px solid black'}}>COMP 3</th>
+                                                <th className="myth4" >PROCEDIMENTOS</th>
+                                                <th className="myth2" >CODIGO</th>
+                                                <th className="myth2" >COMP 1</th>
+                                                <th className="myth2" >COMP 2</th>
+                                                <th className="myth3" >COMP 3</th>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>SONDA VESICAL</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>03.01.10.005-5</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >SONDA VESICAL</td>
+                                                <td className="myth1" >03.01.10.005-5</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>SONDA VESICAL ALIVIO</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>03.01.10.004-7</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >SONDA VESICAL ALIVIO</td>
+                                                <td className="myth1" >03.01.10.004-7</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>ENEMA</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>03.01.10.009-8</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >ENEMA</td>
+                                                <td className="myth1" >03.01.10.009-8</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>IRRIGACAO VESICAL</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>03.01.10.011-0</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >IRRIGACAO VESICAL</td>
+                                                <td className="myth1" >03.01.10.011-0</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>OXIGENOTERAPIA</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>03.01.10.014-4</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >OXIGENOTERAPIA</td>
+                                                <td className="myth1" >03.01.10.014-4</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>CUIDADO TRAQUEOSTO</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>03.01.10.007-1</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >CUIDADO TRAQUEOSTO</td>
+                                                <td className="myth1" >03.01.10.007-1</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>PVC</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>03.01.10.008-0</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >PVC</td>
+                                                <td className="myth1" >03.01.10.008-0</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>NRZ</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>03.01.10.010-1</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >NRZ</td>
+                                                <td className="myth1" >03.01.10.010-1</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>LAVAGEM GASTRICA</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>03.01.10.012-8</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >LAVAGEM GASTRICA</td>
+                                                <td className="myth1" >03.01.10.012-8</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>CUIDADO C/ESTOMA</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>03.01.10.006-3</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >CUIDADO C/ESTOMA</td>
+                                                <td className="myth1" >03.01.10.006-3</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                         </table>
                                     </AccordionPanel>
@@ -243,58 +243,58 @@ const Procedimentosclinico = () => {
                                     <AccordionPanel h='40vh' w='75vw' padding='0.5'>
                                         <table style={{border: '1px solid black'}}>
                                             <tr style={{border: '1px solid black'}}>
-                                                <th style={{width: '25%', fontSize:'12px', border: '1px solid black'}}>PROCEDIMENTOS</th>
-                                                <th style={{width: '20%', fontSize:'12px', border: '1px solid black'}}>CODIGO</th>
-                                                <th style={{width: '10%', fontSize:'12px', border: '1px solid black'}}>QTD</th>
-                                                <th style={{width: '40%', fontSize:'12px', border: '1px solid black'}}>NOME</th>
+                                                <th className="myth4" >PROCEDIMENTOS</th>
+                                                <th className="myth2" >CODIGO</th>
+                                                <th className="myth5" >QTD</th>
+                                                <th className="myth6" >NOME</th>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>CURATIVO II</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>04.01.01.001-5</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >CURATIVO II</td>
+                                                <td className="myth1" >04.01.01.001-5</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>SEDAÇAO</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>04.17.01.006-0</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >SEDAÇAO</td>
+                                                <td className="myth1" >04.17.01.006-0</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>ANESTESIA LOCAL</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>04.17.01.005-2</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >ANESTESIA LOCAL</td>
+                                                <td className="myth1" >04.17.01.005-2</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>PARECENTESE</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>04.07.04.019-6</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >PARECENTESE</td>
+                                                <td className="myth1" >04.07.04.019-6</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>ANASTESIA GERAL</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>04.17.01.004-4</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >ANASTESIA GERAL</td>
+                                                <td className="myth1" >04.17.01.004-4</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>RETIRADA DRENO</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>04.12.03.012-8</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >RETIRADA DRENO</td>
+                                                <td className="myth1" >04.12.03.012-8</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>TRAQUEOSTOMIA</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>04.12.01.012-7</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >TRAQUEOSTOMIA</td>
+                                                <td className="myth1" >04.12.01.012-7</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>TORACOCENTESE</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>04.12.05.017-0</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >TORACOCENTESE</td>
+                                                <td className="myth1" >04.12.05.017-0</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                         </table>
                                     </AccordionPanel>
@@ -311,67 +311,67 @@ const Procedimentosclinico = () => {
                                     <AccordionPanel h='40vh' w='75vw' padding='0.5'>
                                         <table style={{border: '1px solid black'}}>
                                             <tr style={{border: '1px solid black'}}>
-                                                <th style={{width: '25%', fontSize:'12px', border: '1px solid black'}} >PROCEDIMENTOS</th>
-                                                <th style={{width: '20%', fontSize:'12px', border: '1px solid black'}}>CODIGO</th>
-                                                <th style={{width: '20%', fontSize:'12px', border: '1px solid black'}}>COMP 1</th>
-                                                <th style={{width: '20%', fontSize:'12px', border: '1px solid black'}}>COMP 2</th>
-                                                <th style={{fontSize:'12px', border: '1px solid black'}}>COMP 3</th>
+                                                <th className="myth4" >PROCEDIMENTOS</th>
+                                                <th className="myth2" >CODIGO</th>
+                                                <th className="myth2" >COMP 1</th>
+                                                <th className="myth2" >COMP 2</th>
+                                                <th className="myth3" >COMP 3</th>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>ECOCARDIOGRA</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>02.05.01.003-2</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >ECOCARDIOGRA</td>
+                                                <td className="myth1" >02.05.01.003-2</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>ECO TRANSESO</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>02.05.01.002-4</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >ECO TRANSESO</td>
+                                                <td className="myth1" >02.05.01.002-4</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>ENDOSCOPIA</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>02.09.01.003-7</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >ENDOSCOPIA</td>
+                                                <td className="myth1" >02.09.01.003-7</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>USG ADB TOTAL</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>02.05.20.004-06</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >USG ADB TOTAL</td>
+                                                <td className="myth1" >02.05.20.004-06</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>USG AB SUP</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>02.05.02.003-8</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >USG AB SUP</td>
+                                                <td className="myth1" >02.05.02.003-8</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>USG AP URIN</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>02.05.02.005-4</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >USG AP URIN</td>
+                                                <td className="myth1" >02.05.02.005-4</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>DOOPLER</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>02.05.01.004-0</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >DOOPLER</td>
+                                                <td className="myth1" >02.05.01.004-0</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                             <tr style={{border: '1px solid black'}}>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>CATE ADULTO</td>
-                                                <td style={{fontSize:'10px', border: '1px solid black'}}>02.11.02.001-0</td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
-                                                <td style={{border: '1px solid black'}}><Input size='xs'/></td>
+                                                <td className="myth1" >CATE ADULTO</td>
+                                                <td className="myth1" >02.11.02.001-0</td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
+                                                <td className="myth1" ><Input size='xs'/></td>
                                             </tr>
                                         </table>
                                     </AccordionPanel>

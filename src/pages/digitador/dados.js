@@ -102,6 +102,7 @@ const Dados = () => {
                         <Box display='flex' flexDirection='column' justifyContent='flex-start' w='60vw' marginTop='1vh'>
                             <InputGroup size='md' w='30vw'>
                                 <Input
+                                    borderColor='Black'
                                     pr='4.5rem'
                                     type={show ? 'text' : 'password'}
                                     placeholder='Nova Senha'
@@ -114,6 +115,7 @@ const Dados = () => {
                             </InputGroup>
                             <InputGroup size='md' w='30vw' marginTop='1vh'>
                                 <Input
+                                    borderColor='Black'
                                     pr='4.5rem'
                                     type={show2 ? 'text' : 'password'}
                                     placeholder='Comfirmar'

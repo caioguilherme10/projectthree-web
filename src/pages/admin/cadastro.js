@@ -63,10 +63,24 @@ const Cadastro = () => {
                         <Box display='flex' flexDirection='row' w='60vw' marginTop='1vh'>
                             <Box display='flex' flexDirection='column' justifyContent='flex-start'>
                                 <Box marginTop='1vh'>
-                                    <Input pr='4.5rem' placeholder='Email' />
+                                    <Input
+                                        borderColor='Black'
+                                        pr='4.5rem' 
+                                        placeholder='Email' 
+                                    />
                                 </Box>
                                 <Box marginTop='1vh'>
-                                    <Select placeholder='Select option'>
+                                    <Input
+                                        borderColor='Black'
+                                        pr='4.5rem' 
+                                        placeholder='Nome' 
+                                    />
+                                </Box>
+                                <Box marginTop='1vh'>
+                                    <Select
+                                        borderColor='Black'
+                                        placeholder='Select option'
+                                    >
                                         <option value='option1'>Admin</option>
                                         <option value='option2'>Analista</option>
                                         <option value='option3'>Auditor</option>
@@ -78,6 +92,7 @@ const Cadastro = () => {
                         <Box display='flex' flexDirection='column' justifyContent='flex-start' w='60vw' marginTop='1vh'>
                             <InputGroup size='md' w='30vw'>
                                 <Input
+                                    borderColor='Black'
                                     pr='4.5rem'
                                     type={show ? 'text' : 'password'}
                                     placeholder='Senha'
@@ -90,6 +105,7 @@ const Cadastro = () => {
                             </InputGroup>
                             <InputGroup size='md' w='30vw' marginTop='1vh'>
                                 <Input
+                                    borderColor='Black'
                                     pr='4.5rem'
                                     type={show2 ? 'text' : 'password'}
                                     placeholder='Comfirmar'

@@ -39,7 +39,8 @@ const Login = () => {
                     </Box>
                     <Box w='40vw' h='25vh' display='flex' flexDirection='column' justifyContent='center' alignItems='center'>
                         <Box paddingBottom='10'>
-                            <Input 
+                            <Input
+                                borderColor='Black'
                                 placeholder='E-mail' 
                                 pr='4.5rem'
                                 value={email}
@@ -49,6 +50,7 @@ const Login = () => {
                         <Box>
                             <InputGroup size='md'>
                                 <Input
+                                    borderColor='Black'
                                     pr='4.5rem'
                                     type={show ? 'text' : 'password'}
                                     placeholder='Senha'

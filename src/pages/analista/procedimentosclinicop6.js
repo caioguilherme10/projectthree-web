@@ -1,6 +1,7 @@
 import React from "react"
 import { Flex, Box, Spacer, Text, Divider, Button, Avatar, Heading, Input, Textarea, Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel } from '@chakra-ui/react'
 import { useNavigate } from "react-router-dom"
+import "./analista.css"
 
 const Procedimentosclinicop6 = () => {
 
