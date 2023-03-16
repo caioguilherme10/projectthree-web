@@ -23,6 +23,8 @@ import ListChecklistDigitador from './pages/digitador/checklist';
 import ResumoDigitador from './pages/digitador/resumo';
 import DadosAdmin from './pages/admin/dados';
 import CadastroAdmin from './pages/admin/cadastro';
+import ListUsuarios from './pages/admin/listusuarios';
+import ResumoUsuario from './pages/admin/usuario';
 
 const Routess = () => {
     return (
@@ -48,6 +50,8 @@ const Routess = () => {
             <Route path="/resumodigitador" element={<ResumoDigitador />}/>
             <Route path="/dadosadmin" element={<DadosAdmin />}/>
             <Route path="/cadastroadmin" element={<CadastroAdmin />}/>
+            <Route path="/listusuarios" element={<ListUsuarios />}/>
+            <Route path="/resumousuario" element={<ResumoUsuario />}/>
         </Routes>
     );
 };

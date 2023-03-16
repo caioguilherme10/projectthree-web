@@ -22,6 +22,10 @@ const Cadastro = () => {
         navigate("/dadosadmin", { replace: true })
     }
 
+    const irList = async () => {
+        navigate("/listusuarios", { replace: true })
+    }
+
     const irSair = async () => {
         navigate("/", { replace: true })
     }
@@ -46,8 +50,11 @@ const Cadastro = () => {
                     <Box paddingBottom='2' paddingTop='10'>
                         <Button w='15vw' backgroundColor='white' variant='solid' color='blue.900' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' onClick={irCadastro}>Cadastro</Button>
                     </Box>
-                    <Box>
+                    <Box paddingBottom='2'>
                         <Button w='15vw' backgroundColor='white' variant='solid' color='blue.900' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' onClick={irDados}>Dados</Button>
+                    </Box>
+                    <Box>
+                        <Button w='15vw' backgroundColor='white' variant='solid' color='blue.900' boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' onClick={irList}>Usuarios</Button>
                     </Box>
                     <Spacer />
                     <Box paddingBottom='10'>

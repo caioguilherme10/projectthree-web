@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -25,13 +26,35 @@ const theme = extendTheme({
   },*/
 })
 
+const apolloLink = new HttpLink({
+  uri: 'http://localhost:4000',
+  credentials: 'same-origin', // in order to send cookies and force cors
+  //credentials: 'include',
+  //headers: 'Content-Type',
+  //headers: {
+  //  Access-Control-Allow-Origin: true
+  //}
+});
+
+const client = new ApolloClient({
+  //uri: 'http://localhost:4000',
+  link: apolloLink,
+  cache: new InMemoryCache(),
+  //credentials: 'include',
+  //fetchOptions: {
+  //  mode: 'no-cors',
+  //},
+});
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ChakraProvider theme={theme}>
-        <App />
-      </ChakraProvider>
+      <ApolloProvider client={client}>
+        <ChakraProvider theme={theme}>
+          <App />
+        </ChakraProvider>
+      </ApolloProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

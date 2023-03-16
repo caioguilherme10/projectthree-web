@@ -1,6 +1,24 @@
 import React from "react"
 import { Flex, Box, Button, InputGroup, Heading, Input, InputRightElement } from '@chakra-ui/react'
 import { useNavigate } from "react-router-dom"
+import { gql, useMutation } from '@apollo/client'
+
+const GET_LOGINUSER = gql`
+    mutation LoginUser($email: String!, $senha: String!){
+	    loginUser(email: $email, senha: $senha){
+            usuario {
+                id
+                email
+                nome
+                senha
+                status
+                tipo
+                createdAt
+                updatedAt
+            }
+        }
+    }
+`;
 
 const Login = () => {
 
@@ -9,10 +27,19 @@ const Login = () => {
     let navigate = useNavigate();
 
     const [show, setShow] = React.useState(false)
-    const [email,setEmail] =  React.useState('')
+    const [email,setEmail] = React.useState('')
+    const [senha,setSenha] = React.useState('')
     const handleClick = () => setShow(!show)
 
-    const handleLogin = () => {
+    const [loginUser, { loading, error, data }] = useMutation(GET_LOGINUSER);
+
+    const HandleLogin = () => {
+        loginUser({ variables: { email: email, senha: senha } });
+        console.log(email);
+        console.log(senha);
+        console.log(data);
+        console.log(error);
+        console.log(loading);
         if(email === 'analista'){
             navigate("/checklist", { replace: true })
         }else if(email === 'admin'){
@@ -26,6 +53,7 @@ const Login = () => {
     }
 
     const handleChangeEmail = (event) => setEmail(event.target.value)
+    const handleChangeSenha = (event) => setSenha(event.target.value)
 
     return (
         <Flex w='100vw' h='100vh' direction='column'>
@@ -54,6 +82,8 @@ const Login = () => {
                                     pr='4.5rem'
                                     type={show ? 'text' : 'password'}
                                     placeholder='Senha'
+                                    value={senha}
+                                    onChange={handleChangeSenha}
                                 />
                                 <InputRightElement width='4.5rem'>
                                     <Button h='1.75rem' size='sm' onClick={handleClick} backgroundColor='green.800' variant='solid' color='white' _hover={{bg: '#38B2AC'}}>
@@ -64,7 +94,7 @@ const Login = () => {
                         </Box>
                     </Box>
                     <Box w='30vw' h='15vh' paddingTop='5' display='flex' justifyContent='flex-end' alignItems='center'>
-                        <Button w='10vw' backgroundColor='green.800' variant='solid' color='white' _hover={{bg: '#38B2AC'}} onClick={handleLogin}>
+                        <Button w='10vw' backgroundColor='green.800' variant='solid' color='white' _hover={{bg: '#38B2AC'}} onClick={HandleLogin}>
                             Login
                         </Button>
                     </Box>
