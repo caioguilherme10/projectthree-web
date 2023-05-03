@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client';
+//import { createUploadLink } from 'apollo-upload-client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -27,19 +28,27 @@ const theme = extendTheme({
 })
 
 const apolloLink = new HttpLink({
-  uri: 'http://localhost:4000',
-  credentials: 'same-origin', // in order to send cookies and force cors
+  uri: 'http://localhost:4000/graphql',
+  //credentials: 'same-origin', // in order to send cookies and force cors
   //credentials: 'include',
   //headers: 'Content-Type',
-  //headers: {
-  //  Access-Control-Allow-Origin: true
-  //}
+  //headers: {'content-type': 'application/json', 'Apollo-Require-Preflight': 'true', 'Access-Control-Allow-Origin': '*' }
+  headers: { 'Access-Control-Allow-Origin': '*'}
+  //fetchOptions: {
+  //  mode: 'no-cors',
+  //},
 });
 
+//const apolloNewLink = new createUploadLink({
+//  uri: 'http://localhost:4000/graphql',
+//  headers: { 'Access-Control-Allow-Origin': '*'}
+//})
+
 const client = new ApolloClient({
-  //uri: 'http://localhost:4000',
+  //uri: 'http://localhost:4000/graphql',
   link: apolloLink,
   cache: new InMemoryCache(),
+  //headers: { 'Access-Control-Allow-Origin': '*'},
   //credentials: 'include',
   //fetchOptions: {
   //  mode: 'no-cors',

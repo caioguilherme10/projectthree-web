@@ -1,21 +1,21 @@
 import React from "react"
 import { Flex, Box, Button, InputGroup, Heading, Input, InputRightElement } from '@chakra-ui/react'
 import { useNavigate } from "react-router-dom"
-import { gql, useMutation } from '@apollo/client'
+import { gql, useMutation, useQuery } from '@apollo/client'
+import axios from 'axios'
 
 const GET_LOGINUSER = gql`
-    mutation LoginUser($email: String!, $senha: String!){
-	    loginUser(email: $email, senha: $senha){
-            usuario {
-                id
-                email
-                nome
-                senha
-                status
-                tipo
-                createdAt
-                updatedAt
-            }
+    mutation loginUser($usuario: LoginInput!){
+	    loginUser(input:$usuario){
+            id
+            email
+            nome
+            senha
+            foto
+            status
+            tipo
+            createdAt
+            updatedAt
         }
     }
 `;
@@ -31,15 +31,26 @@ const Login = () => {
     const [senha,setSenha] = React.useState('')
     const handleClick = () => setShow(!show)
 
-    const [loginUser, { loading, error, data }] = useMutation(GET_LOGINUSER);
+    //const { loading, error, data } = useQuery(GET_LOGINUSER);
+    const [loginUser, { data, loading, error }] = useMutation(GET_LOGINUSER);
+
+    console.log(loading)
+    console.log(error)
+    console.log(data)
 
     const HandleLogin = () => {
-        loginUser({ variables: { email: email, senha: senha } });
         console.log(email);
         console.log(senha);
-        console.log(data);
-        console.log(error);
-        console.log(loading);
+        let aaa = {
+            usuario: {
+                email: email,
+                senha: senha
+            }
+        }
+        //const { loading, error, data } = useQuery(GET_LOGINUSER, {
+        //    variables: aaa
+        //});
+        loginUser({ variables: aaa });
         if(email === 'analista'){
             navigate("/checklist", { replace: true })
         }else if(email === 'admin'){
@@ -54,6 +65,27 @@ const Login = () => {
 
     const handleChangeEmail = (event) => setEmail(event.target.value)
     const handleChangeSenha = (event) => setSenha(event.target.value)
+
+    React.useEffect(()=> {
+        console.log("effect")
+        async function fetchData() {
+            if(data != undefined){
+                console.log("pegar foto rest api")
+                /*const formData2 = new FormData()
+                formData2.append("file", image)
+                try {
+                    const response = await axios.post(`http://localhost:4001/avatar/`+ data.registerUser.id, formData2 ,{
+                        headers: {"Access-Control-Allow-Origin": "*"}
+                    })
+                    console.log(response);
+                    navigate("/cadastroadmin", { replace: true })
+                } catch (error) {
+                    console.log(error);
+                }*/
+            }
+        }
+        fetchData()
+    },[data])
 
     return (
         <Flex w='100vw' h='100vh' direction='column'>
